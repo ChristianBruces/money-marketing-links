@@ -1,0 +1,22 @@
+:root { --green:#b7f400; --green-deep:#7bb500; --ink:#090b08; --paper:#f7f8f3; --muted:#a9ada4; }
+* { box-sizing:border-box; }
+html { min-height:100%; background:#070806; }
+body { min-height:100%; margin:0; color:var(--paper); font-family:Manrope,Arial,sans-serif; background:radial-gradient(circle at 50% -10%, #1a2a12 0, #090b08 38%, #070806 100%); }
+.page-shell { position:relative; display:grid; place-items:center; min-height:100svh; padding:30px 20px; overflow:hidden; }
+.link-page { position:relative; width:min(100%, 470px); text-align:center; z-index:1; }
+.glow { position:absolute; width:430px; height:430px; border-radius:50%; filter:blur(110px); opacity:.14; background:var(--green); pointer-events:none; }
+.glow--top { top:-280px; right:-200px; }.glow--bottom { bottom:-320px; left:-240px; }
+.brand-line { display:flex; align-items:center; gap:10px; margin:0 auto 27px; color:#8a9384; font:500 9px/1 'DM Mono',monospace; letter-spacing:.08em; white-space:nowrap; }
+.brand-line span { flex:1; height:1px; background:linear-gradient(90deg,transparent,#3a4035); }.brand-line span:last-child { transform:scaleX(-1); }
+.avatar-wrap { position:relative; width:116px; height:116px; margin:0 auto 17px; padding:4px; border-radius:50%; background:linear-gradient(135deg,var(--green),#506d1b 55%,#151914); box-shadow:0 0 0 7px rgba(183,244,0,.06), 0 18px 46px rgba(0,0,0,.4); }
+.avatar-wrap i { position:absolute; width:11px; height:11px; right:4px; bottom:6px; border:2px solid var(--ink); border-radius:50%; background:var(--green); }
+.avatar-placeholder { position:relative; display:grid; place-items:center; width:100%; height:100%; overflow:hidden; border-radius:50%; color:#7e8b73; background:linear-gradient(145deg,#283222,#11170f); }
+.avatar-placeholder svg { position:absolute; width:76%; opacity:.36; transform:translateY(8px); }.avatar-placeholder small { z-index:1; margin-top:70px; font:500 8px 'DM Mono',monospace; letter-spacing:.14em; color:#c9d3bf; }
+.eyebrow { margin:0 0 9px; color:var(--green); font:500 10px/1 'DM Mono',monospace; letter-spacing:.18em; }
+h1 { margin:0; font-size:clamp(36px,9vw,48px); font-weight:800; line-height:.98; letter-spacing:-.07em; } h1 em { color:var(--green); font-style:normal; }
+.intro { max-width:315px; margin:17px auto 28px; color:var(--muted); font-size:13px; line-height:1.6; }
+.links { display:grid; gap:11px; }.link-card { position:relative; display:grid; grid-template-columns:38px 1fr 30px; align-items:center; min-height:65px; padding:7px 13px 7px 8px; border:1px solid #30362e; border-radius:11px; color:var(--paper); text-decoration:none; background:rgba(20,24,18,.72); font-size:14px; font-weight:700; letter-spacing:-.025em; text-align:left; transition:transform .2s ease,border-color .2s ease,background .2s ease; }
+.link-card:hover,.link-card:focus-visible { transform:translateY(-3px); border-color:var(--green); background:#1a2115; outline:none; }.link-icon { display:grid; place-items:center; width:30px; height:30px; border-radius:7px; color:var(--green); background:#252c20; font:500 17px 'DM Mono',monospace; }.arrow { justify-self:end; color:var(--green); font-size:21px; font-weight:400; }.link-card--featured { border-color:var(--green); color:var(--ink); background:var(--green); box-shadow:0 10px 28px rgba(183,244,0,.14); }.link-card--featured .link-icon { color:var(--ink); background:rgba(0,0,0,.12); }.link-card--featured .arrow { color:var(--ink); }
+.socials { display:flex; justify-content:center; gap:10px; margin:26px 0 25px; }.socials a { display:grid; place-items:center; width:30px; height:30px; border:1px solid #343a31; border-radius:50%; color:#b8bdb4; text-decoration:none; font:500 9px 'DM Mono',monospace; text-transform:uppercase; transition:.2s; }.socials a:hover { color:var(--ink); border-color:var(--green); background:var(--green); }
+footer { display:flex; justify-content:center; align-items:center; gap:7px; color:#646b60; font:500 8px 'DM Mono',monospace; letter-spacing:.1em; } footer span:last-child { margin-left:5px; color:#43483f; }.footer-mark { display:grid; place-items:center; width:17px; height:17px; color:var(--ink); border-radius:4px; background:var(--green); font:bold 11px Manrope,sans-serif; letter-spacing:0; }
+@media (max-width:390px) { .page-shell { padding:22px 17px; }.brand-line { font-size:8px; }.avatar-wrap { width:106px; height:106px; }.intro { margin-bottom:22px; }.link-card { min-height:60px; } }
